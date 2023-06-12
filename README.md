@@ -1,25 +1,36 @@
-### OBSERVACIONES DEL EJERCICIO
+# MI API EXPRESS - PRISMA - TYPESCRIPT
 
-- Agregar las regalas del archivo "tsconfig.json" de la siguiente forma:
+### Built with
 
-  ```json
-  "rootDir": "./src".
-  "outDir": "./dist".
-  ```
+- Node.js
+- Express.js
+- Primsa ORM
+- Postgres SQL
+- Typescript
 
-- La instalación de "ts-node" la debemos instalar para poder compilar y ejecutar nuestra app.ts con un solo comando, se debe modificar el
-  pakage.json con el siguiente script (el flag --respawn es similar a --watch en node.js):
+### Descripción
 
-  ```json
-  "scripts": {
-    "start": "ts-node src/app.ts",
-    "dev": "ts-node-dev --respawn src/app.ts",
-    "build": "tsc"
-  }
-  ```
+Esta API permite soporta las principales funciones CRUD, la cual se encuentra conectada a una base de datos SQL Postgres.
+La API soporta las siguinetes peticiones:
 
-- Realizada la configuración anterior, iniciamos la configuración de nuestra "API express", cuando trabajamos con typescript podemos importar nuestros modulos con la palabra reservada "import", diferente como lo haciamos con node.js, debemos instalar los tipos de express:
+- Agregar un resgistro a la DB.
 
-```
-npm i -D @types/express
-```
+http://localhost:3001/api/(users-posts-reviews) - (POST)
+
+- Obtener todos los registros de la base de datos.
+
+http://localhost:3000/api/(users-posts-reviews) - (GET)
+
+- Obtener un resgistro especifico de la DB.
+
+http://localhost:3001/api/(users-posts-reviews)/id - (GET)
+
+- Actualizar un registro de cualquier campo de la tabla especificada en la base de datos, el body ***debe contener el ID*** del registro que se va a actualizar.
+
+http://localhost:3001/api/(users-posts-reviews) - (UPDATE)
+
+- Eliminar un resgistro especifico de la DB.
+
+http://localhost:3001/api/(users-posts-reviews)/id - (DELETE)
+
+
